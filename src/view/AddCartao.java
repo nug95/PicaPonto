@@ -123,8 +123,13 @@ public class AddCartao extends JFrame {
 					GereCartao gcartao = new GereCartao();
 					gcartao.addCartao( cartao, guardaNome);
 					
-					System.out.printf("%s\n",gcartao.getArCartao().get(0).getNumCartao());
-					System.out.printf("%s\n",gcartao.getArCartao().get(0).getCliente());
+					JOptionPane.showMessageDialog(null, 
+							"Username: "+guardaNome+
+							"\nPrimeiro Nome: "+txt_pnome.getText()+
+							"\nUltimo Nome: "+txt_unome.getText()+
+							"\nMorada: "+txt_morada.getText()+
+							"\nContacto: "+txt_contacto.getText()
+							, "Cartão Associado!", JOptionPane.INFORMATION_MESSAGE);
 				}
 			}
 		});
