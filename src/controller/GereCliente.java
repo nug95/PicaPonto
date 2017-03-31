@@ -20,4 +20,9 @@ public class GereCliente {
 		c.setId(novoID);
 		arCliente.add(c);
 	}
+	public void addCliente(Cliente c){
+		int novoID = arCliente.size();
+		c.setId(novoID);
+		arCliente.add(c);
+	}
 }

@@ -2,10 +2,10 @@ package model;
 
 public class Cartao {
 	private int 	id;
-	private int		numCartao;
+	private String	numCartao;
 	private String	cliente;
 	
-	public Cartao(int numCartao, String cliente) {
+	public Cartao(String numCartao, String cliente) {
 		super();
 		this.numCartao = numCartao;
 		this.cliente = cliente;
@@ -19,11 +19,11 @@ public class Cartao {
 		this.id = id;
 	}
 
-	public int getNumCartao() {
+	public String getNumCartao() {
 		return numCartao;
 	}
 
-	public void setNumCartao(int numCartao) {
+	public void setNumCartao(String numCartao) {
 		this.numCartao = numCartao;
 	}
 

@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controller.GereCliente;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -15,23 +18,8 @@ import java.awt.event.MouseEvent;
 public class Principal extends JFrame {
 
 	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Principal frame = new Principal();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
+	GereCliente gc;
+	
 	/**
 	 * Create the frame.
 	 */
@@ -45,10 +33,12 @@ public class Principal extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		gc = new GereCliente();
+		
 		JButton btn_admin = new JButton("Administra\u00E7\u00E3o");
 		btn_admin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				AddCliente cli = new AddCliente();
+				AddCliente cli = new AddCliente(gc);
 				cli.setVisible(true);
 				setVisible(false);
 				

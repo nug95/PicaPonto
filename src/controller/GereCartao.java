@@ -14,7 +14,7 @@ public class GereCartao {
 	public ArrayList<Cartao> getArCartao() { return arCartao; }
 	public void setArCartao(ArrayList<Cartao> arCartao) { this.arCartao = arCartao; }
 	
-	public void addCartao(int numCartao, String cliente){
+	public void addCartao(String numCartao, String cliente){
 		Cartao c = new Cartao(numCartao, cliente);
 		int novoID = arCartao.size();
 		c.setId(novoID);
