@@ -20,13 +20,4 @@ public class GereCliente {
 		c.setId(novoID);
 		arCliente.add(c);
 	}
-	
-	public Cliente procuraCliente(String username){
-		for(Cliente c : arCliente){
-			if(username.compareTo(c.getUsername()) == 0){
-				return c;
-			}
-		}
-		return null;
-	}
 }
