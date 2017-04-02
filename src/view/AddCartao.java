@@ -91,6 +91,11 @@ public class AddCartao extends JFrame {
 		contentPane.add(txt_unome);
 		
 		JButton btn_goBack = new JButton("Sair");
+		btn_goBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				System.exit(0);
+			}
+		});
 		btn_goBack.setBounds(222, 167, 145, 23);
 		contentPane.add(btn_goBack);
 		
@@ -128,8 +133,9 @@ public class AddCartao extends JFrame {
 							"\nPrimeiro Nome: "+txt_pnome.getText()+
 							"\nUltimo Nome: "+txt_unome.getText()+
 							"\nMorada: "+txt_morada.getText()+
-							"\nContacto: "+txt_contacto.getText()
-							, "Cartão Associado!", JOptionPane.INFORMATION_MESSAGE);
+							"\nContacto: "+txt_contacto.getText()+
+							"\nCartao: "+txt_cartao.getText(),
+							"Cartão Associado!", JOptionPane.INFORMATION_MESSAGE);
 				}
 			}
 		});
